@@ -32,7 +32,7 @@ quality:
   start-frequency: 13.333333333333334
   upper-frequency: 896
   window-length: 4
-  priors:
+priors:
   amp order: 1
   chirp-mass:
   - 21.418182160215295
