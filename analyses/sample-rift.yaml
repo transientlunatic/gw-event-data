@@ -1,4 +1,6 @@
 kind: analysis
+name: Test0
+status: Ready
 pipeline: RIFT
 event: GW150914
 approximant: SEOBNRv4PHM
