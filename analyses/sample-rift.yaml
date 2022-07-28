@@ -1,0 +1,5 @@
+kind: analysis
+pipeline: RIFT
+event: GW150914
+approximant: SEOBNRv4PHM
+comment: This is a sample RIFT analysis
