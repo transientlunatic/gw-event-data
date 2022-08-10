@@ -1,0 +1,53 @@
+kind: event
+calibration: {}
+data:
+  channels:
+    H1: H1:DCS-CALIB_STRAIN_CLEAN_SUB60HZ_C01
+    L1: L1:DCS-CALIB_STRAIN_CLEAN_SUB60HZ_C01
+    V1: V1:Hrec_hoft_V1O3ARepro1A_16384Hz
+  frame-types:
+    H1: H1_HOFT_CLEAN_SUB60HZ_C01
+    L1: L1_HOFT_CLEAN_SUB60HZ_C01
+    V1: V1O3Repro1A
+event time: 1253755327.498
+full name: GW190929_012149
+gid: G351874
+interferometers:
+- L1
+- H1
+- V1
+name: S190929a
+old superevent: S190929d
+priors:
+  amp order: 9
+  chirp-mass:
+  - 23.6385078610448
+  - 104.85539754157023
+  component:
+  - 1
+  - 1000
+  distance:
+  - 100
+  - 10000
+  q:
+  - 0.05
+  - 1.0
+productions: []
+psds: {}
+quality:
+  high-frequency: 896
+  lower-frequency:
+    H1: 20
+    L1: 20
+    V1: 20
+  psd-length: 4
+  reference-frequency: 10
+  sample-rate: 2048
+  segment start: 1253755325.498
+  segment-length: 4
+  start-frequency: 3.9977733341464865
+  supress:
+    V1:
+      lower: 49.5
+      upper: 50.5
+  window-length: 4
