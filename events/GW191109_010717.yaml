@@ -31,7 +31,7 @@ priors:
   q:
   - 0.05
   - 1.0
-productions:
+productions: []
 psds: {}
 quality:
   high-frequency: 448
