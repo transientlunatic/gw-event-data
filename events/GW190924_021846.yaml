@@ -1,0 +1,61 @@
+Free-form text can go here. You can write information about this event in standard markdown here and the bot will ignore it.
+
+In the run information block please use YAML markup to specify the metadata and production information for this event. See the [README](https://git.ligo.org/pe/O3/o3b-pe-coordination) on this repository for more information on the format this should take.
+
+# Event information and links
+
++ [CatDev GraceDB](https://catalog-dev.ligo.org/events/G6951/view/)
+
+# Run information
+```yaml
+---
+calibration: {}
+data:
+  channels:
+    H1: H1:DCS-CALIB_STRAIN_CLEAN_SUB60HZ_C01
+    L1: L1:DCS-CALIB_STRAIN_CLEAN_SUB60HZ_C01_T1700406_v4
+    V1: V1:Hrec_hoft_V1O3ARepro1A_16384Hz
+  frame-types:
+    H1: H1_HOFT_CLEAN_SUB60HZ_C01
+    L1: L1_HOFT_CLEAN_SUB60HZ_C01_T1700406_v4
+    V1: V1O3Repro1A
+event time: 1253326744.841309
+full name: GW190924_021846
+gid: G351423
+interferometers:
+- H1
+- L1
+- V1
+name: S190924a
+old superevent: S190924h
+priors:
+  amp order: 1
+  chirp-mass:
+  - 5.076593989629403
+  - 7.942647336817651
+  component:
+  - 1
+  - 1000
+  distance:
+  - 100
+  - 10000
+  q:
+  - 0.05
+  - 1.0
+productions: []
+psds: {}
+quality:
+  lower-frequency:
+    H1: 20
+    L1: 20
+    V1: 20
+  psd-length: 32
+  reference-frequency: 20
+  sample-rate: 8192
+  segment start: 1253326714.841309
+  segment-length: 32
+  supress:
+    V1:
+      lower: 49.5
+      upper: 50.5
+  window-length: 32
