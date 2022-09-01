@@ -1,42 +1,49 @@
 kind: event
-calibration: {}
 data:
+  calibration: {}
   channels:
     H1: H1:DCS-CALIB_STRAIN_C02
     L1: L1:DCS-CALIB_STRAIN_C02
-  frame-types:
+  frame types:
     H1: H1_HOFT_C02
     L1: L1_HOFT_C02
+  segment length: 4
 event time: 1126259462.391
-full name: GW150914_095045
+name: GW150914_095045
 gid: G190047
 interferometers:
 - H1
 - L1
-name: GW150914
 quality:
-  lower-frequency:
+  minimum frequency:
     H1: 20
     L1: 20
-  psd-length: 4
-  reference-frequency: 20
-  sample-rate: 2048
+  maximum frequency: 
+    H1: 896
+    L1: 896
+likelihood:
+  psd length: 4
+  reference frequency: 20
+  sample rate: 2048
   segment start: 1126259460.391
-  segment-length: 4
-  start-frequency: 13.333333333333334
-  upper-frequency: 896
+  start frequency: 13.333333333333334
+  
   window-length: 4
+  
 priors:
   amp order: 1
-  chirp-mass:
-  - 21.418182160215295
-  - 41.97447913941358
-  component:
-  - 1
-  - 1000
-  distance:
-  - 10
-  - 10000
-  q:
-  - 0.05
-  - 1.0
+  chirp mass:
+    minimum: 21.418182160215295
+    maximum: 41.97447913941358
+  mass 1:
+    minimum: 1
+    maximum: 1000
+  mass 2:
+    minimum: 1
+    maximum: 1000
+  luminosity distance:
+    minimum: 10
+    maximum: 10000
+  mass ratio:
+    minimum: 0.05
+    maximum: 1.0
