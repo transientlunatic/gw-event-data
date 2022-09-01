@@ -8,6 +8,6 @@ pipelines:
       request cpus: 4
   bayeswave:
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bayeswave
+      accounting group: ligo.dev.o4.cbc.pe.lalinference
       request memory: 1024
       request post memory: 16384
