@@ -2,7 +2,7 @@ kind: configuration
 pipelines:
   bilby:
     sampler:
-      sampler: nessai
+      sampler: dynesty
     scheduler:
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request cpus: 4
