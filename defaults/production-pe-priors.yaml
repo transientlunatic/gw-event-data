@@ -1,4 +1,4 @@
-kind: default
+kind: configuration
 priors:
 a2:
 - 0
