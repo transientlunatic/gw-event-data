@@ -39,14 +39,14 @@ quality:
     H1: 20
     L1: 20
     V1: 20
-  likelihood: 
-    psd length: 4
-    reference frequency: 10
-    sample rate: 2048  
-    start frequency: 3.9977733341464865
-    window length: 4
-  supress:
-    V1:
-      lower: 49.5
-      upper: 50.5
-  
+likelihood: 
+  psd length: 4
+  reference frequency: 10
+  sample rate: 2048  
+  start frequency: 3.9977733341464865
+  window length: 4
+supress:
+  V1:
+    lower: 49.5
+    upper: 50.5
+
