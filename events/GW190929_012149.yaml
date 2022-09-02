@@ -10,13 +10,12 @@ data:
     V1: V1O3Repro1A
   segment length: 4
 event time: 1253755327.498
-full name: GW190929_012149
 gid: G351874
 interferometers:
 - L1
 - H1
 - V1
-name: S190929a
+name: GW190929_012149
 old superevent: S190929d
 priors:
   amp order: 9
