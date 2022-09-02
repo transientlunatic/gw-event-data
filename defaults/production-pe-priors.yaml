@@ -4,7 +4,7 @@ priors:
     chirp mass:
         maximum: 100
         minimum: 0
-        type: UniformInComponentsChirpMass
+        type: bilby.gw.prior.UniformInComponentsChirpMass
     component:
     - 1
     - 1000
@@ -19,17 +19,17 @@ priors:
         minimum: 0
         type: PowerLaw
     mass 1:
-        maximum: 1
+        maximum: 1000
         minimum: 0
         type: Constraint
     mass 2:
-        maximum: 1
+        maximum: 1000
         minimum: 0
         type: Constraint
     mass ratio:
         maximum: 1.0
         minimum: 0.1
-        type: UniformInComponentsMassRatio
+        type: bilby.gw.prior.UniformInComponentsMassRatio
     phase:
         boundary: periodic
         type: Uniform
