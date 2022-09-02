@@ -1,60 +1,57 @@
 kind: configuration
 priors:
-a2:
-- 0
-- 0.99
-amp order: 1
-chirp mass:
-    maximum: 100
-    minimum: 0
-    type: UniformInComponentsChirpMass
-component:
-- 1
-- 1000
-dec:
-    type: Cosine
-distance:
-- 10
-- 10000
-luminosity distance:
-    alpha: 2
-    maximum: 1000
-    minimum: 0
-    type: PowerLaw
-mass 1:
-    maximum: 1
-    minimum: 0
-    type: Constraint
-mass 2:
-    maximum: 1
-    minimum: 0
-    type: Constraint
-mass ratio:
-    maximum: 1.0
-    minimum: 0.1
-    type: UniformInComponentsMassRatio
-phase:
-    boundary: periodic
-    type: Uniform
-phi 12:
-    type: Uniform
-phi jl:
-    type: Uniform
-psi:
-    type: Uniform
-ra:
-    type: Uniform
-spin 1:
-    maximum: 1
-    minimum: 0
-    type: Uniform
-spin 2:
-    maximum: 1
-    minimum: 0
-    type: Uniform
-theta jn:
-    type: Sine
-tilt 1:
-    type: Sine
-tilt 2:
-    type: Sine
+    amp order: 1
+    chirp mass:
+        maximum: 100
+        minimum: 0
+        type: UniformInComponentsChirpMass
+    component:
+    - 1
+    - 1000
+    dec:
+        type: Cosine
+    distance:
+    - 10
+    - 10000
+    luminosity distance:
+        alpha: 2
+        maximum: 1000
+        minimum: 0
+        type: PowerLaw
+    mass 1:
+        maximum: 1
+        minimum: 0
+        type: Constraint
+    mass 2:
+        maximum: 1
+        minimum: 0
+        type: Constraint
+    mass ratio:
+        maximum: 1.0
+        minimum: 0.1
+        type: UniformInComponentsMassRatio
+    phase:
+        boundary: periodic
+        type: Uniform
+    phi 12:
+        type: Uniform
+    phi jl:
+        type: Uniform
+    psi:
+        type: Uniform
+    ra:
+        type: Uniform
+    spin 1:
+        maximum: 1
+        minimum: 0
+        type: Uniform
+    spin 2:
+        maximum: 1
+        minimum: 0
+        type: Uniform
+    theta jn:
+        type: Sine
+    tilt 1:
+        type: Sine
+    tilt 2:
+        type: Sine
