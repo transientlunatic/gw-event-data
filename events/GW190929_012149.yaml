@@ -20,16 +20,8 @@ old superevent: S190929d
 priors:
   amp order: 9
   chirp mass:
-  - 23.6385078610448
-  - 104.85539754157023
-  luminosity distance:
-  - 100
-  - 10000
-  mass ratio:
-  - 0.05
-  - 1.0
-productions: []
-psds: {}
+    minimum: 23.6385078610448
+    maximum: 104.85539754157023
 quality:
   maximum frequency: 
     H1: 896
