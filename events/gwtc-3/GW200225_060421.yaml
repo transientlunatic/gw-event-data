@@ -14,12 +14,6 @@ interferometers:
 - L1
 kind: event
 likelihood:
-  maximum frequency:
-    H1: 896
-    L1: 896
-  minimum frequency:
-    H1: 20
-    L1: 20
   psd length: 8
   reference frequency: 20
   sample rate: 2048
@@ -41,6 +35,13 @@ priors:
   mass ratio:
     maximum: 1.0
     minimum: 0.05
+quality:
+  maximum frequency:
+    H1: 896
+    L1: 896
+  minimum frequency:
+    H1: 20
+    L1: 20
 supress:
   V1:
     lower: 46.0

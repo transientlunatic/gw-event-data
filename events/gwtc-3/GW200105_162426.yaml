@@ -14,9 +14,6 @@ interferometers:
 - V1
 kind: event
 likelihood:
-  minimum frequency:
-    L1: 20
-    V1: 20
   psd length: 32
   reference frequency: 20
   sample rate: 8192
@@ -40,6 +37,10 @@ priors:
   spin 2:
     maximum: 1.0
     minimum: 0
+quality:
+  minimum frequency:
+    L1: 20
+    V1: 20
 supress:
   V1:
     lower: 46.0
