@@ -1,0 +1,50 @@
+data:
+  channels:
+    H1: H1:DCS-CALIB_STRAIN_CLEAN_SUB60HZ_C01
+    L1: L1:DCS-CALIB_STRAIN_CLEAN_SUB60HZ_C01
+    V1: V1:Hrec_hoft_16384Hz
+  frame types:
+    H1: H1_HOFT_CLEAN_SUB60HZ_C01
+    L1: L1_HOFT_CLEAN_SUB60HZ_C01
+    V1: V1Online
+  segment length: 16
+event time: 1268431094.157825
+interferometers:
+- H1
+- L1
+- V1
+kind: event
+likelihood:
+  maximum frequency:
+    H1: 1792
+    L1: 1792
+    V1: 1792
+  minimum frequency:
+    H1: 20
+    L1: 20
+    V1: 20
+  psd length: 16
+  reference frequency: 20
+  sample rate: 4096
+  segment start: 1268431080.157825
+  start frequency: 13.333333333333334
+  window length: 16
+name: GW200316_215756
+priors:
+  amplitude order: 1
+  chirp mass:
+    maximum: 13.962428305860232
+    minimum: 7.8885367345513835
+  luminosity distance:
+    maximum: 10000
+    minimum: 100
+  mass 1:
+    maximum: 1000
+    minimum: 1
+  mass ratio:
+    maximum: 1.0
+    minimum: 0.05
+supress:
+  V1:
+    lower: 46.0
+    upper: 51.0
