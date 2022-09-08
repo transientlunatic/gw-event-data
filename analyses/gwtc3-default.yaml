@@ -12,11 +12,4 @@ approximant: IMRPhenomXPHM
 comment: Bilby parameter estimation job
 needs:
     - Prod0
----
-kind: analysis
-name: Prod2
-pipeline: RIFT
-approximant: SEOBNRv4PHM
-comment: RIFT parameter estimation job
-needs:
-    - Prod0
+
