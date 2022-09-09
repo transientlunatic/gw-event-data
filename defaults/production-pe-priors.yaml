@@ -1,6 +1,6 @@
 kind: configuration
 priors:
-    amp order: 2
+    amplitude order: 2
     chirp mass:
         maximum: 100
         minimum: 0

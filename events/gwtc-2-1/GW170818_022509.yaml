@@ -1,0 +1,43 @@
+data:
+  channels:
+    H1: H1:DCH-CLEAN_STRAIN_C02
+    L1: L1:DCH-CLEAN_STRAIN_C02
+    V1: V1:Hrec_hoft_V1O2Repro2A_16384Hz
+  frame types:
+    H1: H1_CLEANED_HOFT_C02
+    L1: L1_CLEANED_HOFT_C02
+    V1: V1O2Repro2A
+  segment length: 4
+event time: 1187058327.081509
+interferometers:
+- L1
+- H1
+- V1
+kind: event
+likelihood:
+  psd length: 4
+  reference frequency: 20
+  sample rate: 2048
+  segment start: 1187058325.081509
+  start frequency: 13.333333333333334
+  window length: 4
+name: GW170818_022509
+priors:
+  amplitude order: 1
+  chirp mass:
+    maximum: 46.49394820454115
+    minimum: 20.9219071736256
+  luminosity distance:
+    maximum: 10000
+    minimum: 100
+  mass 1:
+    maximum: 1000
+    minimum: 1
+  mass ratio:
+    maximum: 1.0
+    minimum: 0.05
+quality:
+  minimum frequency:
+    H1: 20
+    L1: 20
+    V1: 20
