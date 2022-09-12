@@ -1,0 +1,7 @@
+# This file contains the standard set of analyses which were
+# applied to the events for the GWTC-3 catalogue paper.
+kind: analysis
+name: Prod1
+pipeline: bilby
+approximant: IMRPhenomXPHM
+comment: Bilby parameter estimation job
