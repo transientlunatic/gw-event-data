@@ -1,0 +1,6 @@
+kind: analysis
+name: RIFT0
+status: Ready
+pipeline: RIFT
+approximant: SEOBNRv4PHM
+comment: This is a sample RIFT analysis
