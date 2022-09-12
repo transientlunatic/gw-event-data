@@ -1,50 +1,46 @@
-calibration: {}
 data:
   channels:
     H1: H1:DCS-CALIB_STRAIN_CLEAN_SUB60HZ_C01
     L1: L1:DCS-CALIB_STRAIN_CLEAN_SUB60HZ_C01_T1700406_v4
     V1: V1:Hrec_hoft_V1O3ARepro1A_16384Hz
-  frame-types:
+  frame types:
     H1: H1_HOFT_CLEAN_SUB60HZ_C01
     L1: L1_HOFT_CLEAN_SUB60HZ_C01_T1700406_v4
     V1: V1O3Repro1A
+  segment length: 32
 event time: 1253326744.841309
-full name: GW190924_021846
-gid: G351423
 interferometers:
 - H1
 - L1
 - V1
-name: S190924a
-old superevent: S190924h
+kind: event
+likelihood:
+  psd length: 32
+  reference frequency: 20
+  sample rate: 8192
+  segment start: 1253326714.841309
+  window length: 32
+name: GW190924_021846
 priors:
-  amp order: 1
-  chirp-mass:
-  - 5.076593989629403
-  - 7.942647336817651
-  component:
-  - 1
-  - 1000
-  distance:
-  - 100
-  - 10000
-  q:
-  - 0.05
-  - 1.0
-productions: []
-psds: {}
+  amplitude order: 1
+  chirp mass:
+    maximum: 7.942647336817651
+    minimum: 5.076593989629403
+  luminosity distance:
+    maximum: 10000
+    minimum: 100
+  mass 1:
+    maximum: 1000
+    minimum: 1
+  mass ratio:
+    maximum: 1.0
+    minimum: 0.05
 quality:
-  lower-frequency:
+  minimum frequency:
     H1: 20
     L1: 20
     V1: 20
-  psd-length: 32
-  reference-frequency: 20
-  sample-rate: 8192
-  segment start: 1253326714.841309
-  segment-length: 32
-  supress:
-    V1:
-      lower: 49.5
-      upper: 50.5
-  window-length: 32
+supress:
+  V1:
+    lower: 49.5
+    upper: 50.5
