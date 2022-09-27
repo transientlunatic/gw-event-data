@@ -11,3 +11,20 @@ pipelines:
       accounting group: ligo.dev.o4.cbc.pe.lalinference
       request memory: 1024
       request post memory: 16384
+postprocessing:
+  pesummary:
+    accounting group: ligo.dev.o4.cbc.pe.lalinference
+    cosmology: Planck15_lal
+    evolve spins: true
+    multiprocess: 4
+    redshift: exact
+    regenerate posteriors:
+    - redshift
+    - mass_1_source
+    - mass_2_source
+    - chirp_mass_source
+    - total_mass_source
+    - final_mass_source
+    - final_mass_source_non_evolved
+    - radiated_energy
+    skymap samples: 2000
