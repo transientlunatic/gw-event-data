@@ -15,7 +15,7 @@ postprocessing:
   pesummary:
     accounting group: ligo.dev.o4.cbc.pe.lalinference
     cosmology: Planck15_lal
-    evolve spins: true
+    evolve spins: forward
     multiprocess: 4
     redshift: exact
     regenerate posteriors:
