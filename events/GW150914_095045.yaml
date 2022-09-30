@@ -38,8 +38,9 @@ quality:
     H1: 20
     L1: 20
 psds:
-  H1: /home/daniel.williams/events/O3/event_repos/GW150914/C01_offline/psds/2048/H1-psd.dat
-  L1: /home/daniel.williams/events/O3/event_repos/GW150914/C01_offline/psds/2048/L1-psd.dat
+  2048:
+    H1: /home/daniel.williams/events/O3/event_repos/GW150914/C01_offline/psds/2048/H1-psd.dat
+    L1: /home/daniel.williams/events/O3/event_repos/GW150914/C01_offline/psds/2048/L1-psd.dat
 calibration:
   H1: /home/daniel.williams/events/O3/event_repos/GW150914/C01_offline/calibration/H1.dat
   L1: /home/daniel.williams/events/O3/event_repos/GW150914/C01_offline/calibration/L1.dat
