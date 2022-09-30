@@ -1,0 +1,30 @@
+kind: analysis
+pipeline: bilby
+comment: Fiducial BBH - IMRPhenomXPHM
+approximant: IMRPhenomXPHM
+name: Fiducial1
+---
+kind: analysis
+pipeline: bilby
+comment: Fiducial BBH - SEOBNRv4PHM
+approximant: SEOBNRv4PHM
+name: Fiducial2
+---
+kind: analysis
+pipeline: bilby
+comment: Fiducial extreme mass ratio - IMRPhenomTPHM
+approximant: IMRPhenomTPHM
+name: Fiducial3
+---
+kind: analysis
+pipeline: bilby
+comment: Fiducial BNS - IMRPhenomPv2NRTidalv2
+approximant: IMRPhenomPv2NRTidalv2
+name: Fiducial4
+---
+kind: analysis
+pipeline: bilby
+comment: Fiducial BNS - TEOBResumS
+approximant: TEOBResumS
+name: Fiducial5
+
