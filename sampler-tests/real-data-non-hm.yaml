@@ -5,7 +5,7 @@
 # ---
 kind: analysis
 event: GW150914_095045
-approximant: IMRPhenomXPHM
+approximant: IMRPhenomXP
 name: Real0-NoHM
 pipeline: bilby
 # ---
@@ -17,13 +17,13 @@ pipeline: bilby
 ---
 kind: analysis
 event: GW191109_010717
-approximant: IMRPhenomXPHM
+approximant: IMRPhenomXP
 name: Real2-NoHM
 pipeline: bilby
 ---
 kind: analysis
 event: GW200208_222617
-approximant: IMRPhenomXPHM
+approximant: IMRPhenomXP
 name: Real3-NoHM
 pipeline: bilby
 # ---
