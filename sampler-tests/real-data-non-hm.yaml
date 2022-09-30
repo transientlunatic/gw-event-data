@@ -4,7 +4,7 @@
 # We will need more data about this blip glitch than this
 # ---
 kind: analysis
-event: GW150914
+event: GW150914_095045
 approximant: IMRPhenomXPHM
 name: Real0-NoHM
 pipeline: bilby
