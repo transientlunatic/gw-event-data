@@ -1,0 +1,34 @@
+# kind: event
+# name: Blip
+# event time: 1238174807.94
+# We will need more data about this blip glitch than this
+# ---
+kind: analysis
+event: GW150914
+approximant: IMRPhenomXPHM
+name: Real0-NoHM
+pipeline: bilby
+# ---
+# kind: analysis
+# event: GW190425
+# approximant: IMRPhenomPv2_NRTidal
+# name: Real2
+# pipeline: bilby
+---
+kind: analysis
+event: GW191109_010717
+approximant: IMRPhenomXPHM
+name: Real2-NoHM
+pipeline: bilby
+---
+kind: analysis
+event: GW200208_222617
+approximant: IMRPhenomXPHM
+name: Real3-NoHM
+pipeline: bilby
+# ---
+# kind: analysis
+# event: Blip
+# approximant: IMRPhenomXPHM
+# name: Real4
+# pipeline: bilby
