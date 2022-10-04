@@ -1,0 +1,49 @@
+# This file contains all of the event specifications
+# required to set up the PP tests.
+kind: configuration
+data:
+  channels:
+    H1: H1:O4MDC
+    L1: L1:O4MDC
+    V1: V1:O4MDC
+  calibration:
+    H1: /home/pe.o4/sampler-review/data/pp-tests/calibration/2019-11-01_O3_LHO_GPSTime_1244415456_C01_RelativeResponseUncertainty_FinalResults.txt
+    L1: /home/pe.o4/sampler-review/data/pp-tests/calibration/2019-11-01_O3_LLO_GPSTime_1244415456_C01_RelativeResponseUncertainty_FinalResults.txt
+    V1: /home/pe.o4/sampler-review/data/pp-tests/calibration/V_O3a_calibrationUncertaintyEnvelope_magnitude5percent_phase35milliradians10microseconds.txt
+
+quality:
+  H1: 20
+  L1: 20
+  V1: 20
+---
+kind: event
+name: PPTest_1sec_BBH
+psds:
+  H1: /home/pe.o4/sampler-review/data/pp-tests/1s/H1_1s_psd.txt
+  L1: /home/pe.o4/sampler-review/data/pp-tests/1s/L1_1s_psd.txt
+  V1: /home/pe.o4/sampler-review/data/pp-tests/1s/V1_1s_psd.txt
+approximant: IMRPhenomXPHM
+likelihood:
+  segment start: # TODO
+  psd length: 4
+  window length: 4
+  reference frequency: 20
+  sample rate: 4096
+  marginalization:
+    distance: True
+    distance lookup: /home/pe.o4/sampler-review/data/pp-tests/1s/distance_lookup.npz
+priors:
+  amplitude order: 4
+  chirp mass:
+    maximum: 200
+    minimum: 0
+    type: bilby.gw.prior.UniformInComponentsChirpMass
+  luminosity distance:
+    maximum: 1500
+    minimum: 1.0
+    boundary: None
+    type: bilby.gw.prior.UniformSourceFrame
+  geocentric time:
+    maximum: None
+    minimum: None
+    type: Uniform
