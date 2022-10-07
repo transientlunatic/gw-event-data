@@ -31,7 +31,7 @@ likelihood:
   window-length: 4
   
 priors:
-  amp order: 1
+  amplitude order: 1
   chirp mass:
     minimum: 21.418182160215295
     maximum: 41.97447913941358
