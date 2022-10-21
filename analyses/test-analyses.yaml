@@ -1,0 +1,28 @@
+# These analyses are designed to thoroughly test all potential samplers with the various supported pipelines, and aren't designed for production PE.
+
+# This file contains the standard set of analyses which were
+# applied to the events for the GWTC-3 catalogue paper.
+kind: analysis
+name: Prod0
+pipeline: bayeswave
+comment: Bayeswave on-source PSD estimation job
+---
+kind: analysis
+name: BilbyDynesty
+pipeline: bilby
+approximant: IMRPhenomXPHM
+comment: Bilby parameter estimation job
+needs:
+    - Prod0
+sampler:
+  sampler: dynesty
+---
+kind: analysis
+name: BilbyNessai
+pipeline: bilby
+approximant: IMRPhenomXPHM
+comment: Bilby parameter estimation job
+needs:
+    - Prod0
+sampler:
+  sampler: nessai
