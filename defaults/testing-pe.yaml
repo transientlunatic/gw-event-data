@@ -1,0 +1,33 @@
+kind: configuration
+pipelines:
+  bilby:
+    sampler:
+      sampler: dynesty
+      sampler kwargs: {'nlive': 20, 'sample': 'rwalk', 'walks': 5, 'nact': 2, 'check_point_delta_t':1800, 'check_point_plot':False}
+    scheduler:
+      accounting group: ligo.dev.o4.cbc.pe.bilby
+      request cpus: 16
+  bayeswave:
+    likelihood:
+      iterations: 250000
+    scheduler:
+      accounting group: ligo.dev.o4.cbc.pe.lalinference
+      request memory: 1024
+      request post memory: 16384
+postprocessing:
+  pesummary:
+    accounting group: ligo.dev.o4.cbc.pe.lalinference
+    cosmology: Planck15_lal
+    evolve spins: forward
+    multiprocess: 4
+    redshift: exact
+    regenerate posteriors:
+    - redshift
+    - mass_1_source
+    - mass_2_source
+    - chirp_mass_source
+    - total_mass_source
+    - final_mass_source
+    - final_mass_source_non_evolved
+    - radiated_energy
+    skymap samples: 2000
