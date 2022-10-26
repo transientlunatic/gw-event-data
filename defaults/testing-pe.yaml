@@ -3,7 +3,8 @@ pipelines:
   bilby:
     sampler:
       sampler: dynesty
-      sampler kwargs: {'nlive': 20, 'sample': 'rwalk', 'walks': 5, 'nact': 2, 'check_point_delta_t':1800, 'check_point_plot':False}
+      parallel jobs: 2
+      sampler kwargs: "{nlive: 100, dlogz: 1}"
     scheduler:
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request cpus: 16
