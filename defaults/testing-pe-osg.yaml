@@ -11,14 +11,13 @@ pipelines:
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request cpus: 16
   bayeswave:
-    scheduler:
-      osg: True
     likelihood:
       iterations: 250000
     scheduler:
       accounting group: ligo.dev.o4.cbc.pe.lalinference
       request memory: 1024
       request post memory: 16384
+      osg: True
 postprocessing:
   pesummary:
     accounting group: ligo.dev.o4.cbc.pe.lalinference
