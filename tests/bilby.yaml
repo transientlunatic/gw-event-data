@@ -5,4 +5,6 @@ name: Prod1
 pipeline: bilby
 waveform:
     approximant: IMRPhenomXPHM
+scheduler:
+    accounting group: test
 comment: Bilby parameter estimation job
