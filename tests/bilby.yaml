@@ -3,5 +3,6 @@
 kind: analysis
 name: Prod1
 pipeline: bilby
-approximant: IMRPhenomXPHM
+waveform:
+    approximant: IMRPhenomXPHM
 comment: Bilby parameter estimation job
