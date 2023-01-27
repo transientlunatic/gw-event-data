@@ -16,6 +16,18 @@ quality:
   L1: 20
   V1: 20
 ---
+kind: configuration
+pipelines:
+  bilby:
+    sampler:
+      sampler: dynesty
+      parallel jobs: 4
+      seed: 1000
+    scheduler:
+      osg: True
+      accounting group: ligo.dev.o4.cbc.pe.bilby
+      request cpus: 16
+---
 kind: event
 name: PPTest_1sec_BBH
 psds:
@@ -24,7 +36,7 @@ psds:
   V1: /home/pe.o4/sampler-review/data/pp-tests/1s/V1_1s_psd.txt
 approximant: IMRPhenomXPHM
 likelihood:
-  segment start: # TODO
+  frequency domain source model: lal_binary_black_hole
   psd length: 4
   window length: 4
   reference frequency: 20
