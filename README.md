@@ -1,92 +1,39 @@
-# Data
+# Data for asimov
 
-Asimov data files
+This repository contains additional data for asimov, which is intended to help simplify the process of creating analyses, and recreating analyses on published gravitational wave events.
 
-## Getting started
+**Note** While we've made a best effort to ensure that the information contained in these files is accurate, and accurately reflects the settings used in the various analyses in published catalogues, they have not been thoroughly reviewed, and caution should be employed if using them to set up a new analysis.
 
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
+## Using the data
 
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
+The data provided in this repository are in the form of `asimov` blueprint files.
+These allow settings to be directly applied to an `asimov` project, for example, to add GW150914 to your project you should run 
 ```
-cd existing_repo
-git remote add origin https://git.ligo.org/asimov/data.git
-git branch -M main
-git push -uf origin main
+$ asimov apply -f /path/to/this/repository/events/gwtc-2-1/GW150914_095045.yaml
 ```
+You can also apply the file directly from the internet, without cloning the repository, by using the "raw" version of the file on gitlab.
+For GW150914 you should change the above command to
+```
+$ asimov apply -f https://git.ligo.org/asimov/data/-/raw/main/events/gwtc-2-1/GW150914_095045.yaml
+```
+to achieve this.
 
-## Integrate with your tools
+## Data available
 
-- [ ] [Set up project integrations](https://git.ligo.org/asimov/data/-/settings/integrations)
+All of the events from GWTC-3 are included in this repository, however these have been subdivided into events from GWTC-2.1, which includes all of the events from the O1, O2, and O3a observing runs, and GWTC-3, which adds the events from the O3b run.
+All of the blueprint files for these events can be found in the `events` directory of the repository.
+Each blueprint provides information about data channels, frame types, appropriate priors and analysis settings, and information about the event, including the time it occured.
+Each event is named with its full gravitational wave GW name.
 
-## Collaborate with your team
+In addition to event blueprints we provide analysis settings in the `analyses` directory.
+The `production-default.yaml` file contains the settings which were used for each event when preparing the GWTC-2.1 and GWTC-3 catalogues' parameter estimation analyses for Binary Black Hole events.
+Applying this file to an event in an asimov project will add a `Bayeswave` job to produce an on-source PSD, an `Bilby` analysis using the IMRPhenomXPHM waveform, and a `RIFT` analysis using the `SEOBNRv4PHM` waveform.
+Please note, that as these are intended to produce **production quality** analyses, they may take weeks to complete on a large high throughput computing facility.
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Automatically merge when pipeline succeeds](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+To reduce the amount of settings which must be set on a per-event or event per-analysis basis this repository contains blueprints which set various defaults for both analyses and priors which are inteded to provide reasonable settings for most analyses, though each of these defaults can be overwritten by an event for all it's analyses, or any individual analysis.
+These can be found in the `defaults` directory, with the `production-pe.yaml` blueprint containing the default pipeline settings used for the GWTC-2.1 and GWTC-3 analyses, and `production-priors.yaml` the default priors for BBH events.
 
-## Test and Deploy
+## Information about this documentation
 
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing(SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!).  Thank you to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
++ This documentation was written on 2023-02-01 by Daniel Williams in preparation for the release of `asimov v0.4`.
++ Please [raise an issue](https://git.ligo.org/asimov/data/-/issues) on this repository if you find any errors in the blueprints, or places where clarifications would be helpful.
