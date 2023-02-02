@@ -44,6 +44,7 @@ quality:
   minimum frequency:
     H1: 20
     L1: 20
+    V1: 20
 supress:
   V1:
     lower: 49.5
