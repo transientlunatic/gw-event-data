@@ -37,7 +37,7 @@ priors:
     maximum: 1.0
     minimum: 0.05
   spin 2:
-    maximum: 1.0
+    maximum: 0.99
     minimum: 0
 quality:
   minimum frequency:

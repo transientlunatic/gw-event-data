@@ -19,7 +19,7 @@ likelihood:
   reference frequency: 10
   sample rate: 8192
   segment start: 1260808268.45
-  start frequency: '10'
+  start frequency: 10
   window length: 32
 name: GW191219_163120
 priors:
