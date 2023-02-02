@@ -12,12 +12,12 @@ pipelines:
     likelihood:
       iterations: 250000
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.lalinference
+      accounting group: ligo.dev.o4.cbc.pe.bilby
       request memory: 1024
       request post memory: 16384
 postprocessing:
   pesummary:
-    accounting group: ligo.dev.o4.cbc.pe.lalinference
+    accounting group: ligo.dev.o4.cbc.pe.bilby
     cosmology: Planck15_lal
     evolve spins: forward
     multiprocess: 4
