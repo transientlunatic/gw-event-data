@@ -5,3 +5,5 @@ pipeline: RIFT
 waveform:
     approximant: SEOBNRv4PHM
 comment: This is a sample RIFT analysis
+scheduler:
+    accounting group: test
