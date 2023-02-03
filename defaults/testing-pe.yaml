@@ -19,7 +19,7 @@ postprocessing:
   pesummary:
     accounting group: ligo.dev.o4.cbc.pe.bilby
     cosmology: Planck15_lal
-    evolve spins: forward
+    evolve spins: forwards
     multiprocess: 4
     redshift: exact
     regenerate posteriors:
