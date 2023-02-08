@@ -15,6 +15,10 @@ pipelines:
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request memory: 1024
       request post memory: 16384
+  rift:
+    scheduler:
+      accounting group: ligo.dev.o4.cbc.pe.bilby
+      request memory: 1024
 postprocessing:
   pesummary:
     accounting group: ligo.dev.o4.cbc.pe.bilby
