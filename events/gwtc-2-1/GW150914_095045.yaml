@@ -7,7 +7,7 @@ data:
     L1: L1_HOFT_C02
   segment length: 4
 event time: 1126259462.391
-gid: G190276
+gid: G190047
 interferometers:
 - H1
 - L1
