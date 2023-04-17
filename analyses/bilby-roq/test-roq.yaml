@@ -15,7 +15,9 @@ likelihood:
     sample: False
   type: bilby.gw.likelihood.roq.ROQGravitationalWaveTransient
   roq:
-    folder:  /home/roq/IMRPhenomPv2_NRTidalv2/bns/
+    folder:  None
+    linear matrix: /home/roq/IMRPhenomPv2_NRTidalv2/bns/basis_128s.hdf5
+    quadratic matrix: /home/roq/IMRPhenomPv2_NRTidalv2/bns/basis_128s.hdf5
     scale: 1.0
 sampler:
   sampler: dynesty
