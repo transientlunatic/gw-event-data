@@ -1,0 +1,11 @@
+kind: analysis
+pipeline: bilby
+name: bilby-mb-test-pv2
+approximant: IMRPhenomPv2
+comment: Multibanded test job
+likelihood:
+  type: bilby.gw.likelihood.multiband.MBGravitationalWaveTransient
+sampler:
+  sampler: dynesty
+needs:
+  - Bayeswave

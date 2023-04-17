@@ -1,0 +1,9 @@
+kind: analysis
+pipeline: bilby
+approximant: IMRPhenomPv2
+comment: Relative binning test job
+likelihood:
+  type: bilby.gw.likelihood.relative.RelativeBinningGravitationalWaveTransient
+sampler:
+  sampler: dynesty
+name: BilbyRelativeBinning
