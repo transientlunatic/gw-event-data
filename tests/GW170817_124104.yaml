@@ -1,0 +1,70 @@
+# Test event YAML based on the following lalinference MCMC run (from GWTC-1):
+# https://git.ligo.org/pe_event_samples/GW170817/blob/master/ini/G298048_C02_IMRPPNRT_lowspin_nomargphi.ini
+
+kind: event
+data:
+  calibration: {}
+  channels:
+    H1: H1:DCH-CLEAN_STRAIN_C02
+    L1: L1:DCH-CLEAN_STRAIN_C02_T1700406_v3
+    V1: V1:Hrec_hoft_V1O2Repro2A_16384Hz
+  frame types:
+    H1: H1_CLEANED_HOFT_C02
+    L1: L1_CLEANED_HOFT_C02_T1700406_v3
+    V1: V1O2Repro2A
+  segment length: 128
+event time: 1187008882.446
+name: GW170817_124104
+gid: G298048
+interferometers:
+- H1
+- L1
+- V1
+quality:
+  minimum frequency:
+    H1: 24
+    L1: 24
+    V1: 24
+  maximum frequency: 
+    H1: 2048
+    L1: 2048
+likelihood:
+  psd length: 1377
+  reference frequency: 100
+  sample rate: 4096
+  segment start: 1187006834
+  start frequency: 24
+  
+  window length: 128
+  
+priors:
+  amplitude order: 0
+  chirp mass:
+    minimum: 1.1838325
+    maximum: 2.16847416667
+  mass 1:
+    minimum: 0.5
+    maximum: 7.73105475907
+  mass 2:
+    minimum: 0.5
+    maximum: 7.73105475907
+  luminosity distance:
+    minimum: 10
+    maximum: 75
+  mass ratio:
+    minimum: 0.125
+    maximum: 1.0
+  lambda 1:
+    minimum: 0.0
+    maximum: 5000.0
+  lambda 2:
+    minimum: 0.0
+    maximum: 5000.0
+  spin 1:
+    maximum: 0.05
+    minimum: 0
+  spin 2:
+    maximum: 0.05
+    minimum: 0
+
+
