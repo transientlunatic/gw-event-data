@@ -1,0 +1,31 @@
+# Testing blueprint for bilby ROQ jobs
+# ---
+# This blueprint file will provide the settings required to test the bilby pipeline using an ROQ likelihood.
+
+kind: analysis
+pipeline: bilby
+name: bilby-roq-test-pv2
+needs:
+  - Bayeswave
+approximant:  IMRPhenomPv2
+comment: IMRPhenomPv2 ROQ Test Job
+likelihood:
+  calibration:
+    sample: False
+  type: bilby.gw.likelihood.roq.ROQGravitationalWaveTransient
+  roq:
+    folder: /home/cbc/ROQ_data/IMRPhenomPv2/8s
+    scale: 1.0
+sampler:
+  sampler: dynesty
+quality:
+  maximum frequency:
+    H1: 1024
+    L1: 1024
+    V1: 1024
+    K1: 1024
+    G1: 1024
+prior:
+  chirp mass:
+    minimum: 7.932707
+    maximum: 14.759644
