@@ -14,7 +14,7 @@ likelihood:
     sample: False
   type: bilby.gw.likelihood.roq.ROQGravitationalWaveTransient
   roq:
-    folder: /home/cbc/ROQ_data/IMRPhenomPv2/8s
+    folder:  /home/roq/IMRPhenomPv2/low_mass_ratio
     scale: 1.0
 sampler:
   sampler: dynesty
