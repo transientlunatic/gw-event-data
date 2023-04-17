@@ -10,11 +10,12 @@ needs:
 approximant:  IMRPhenomPv2
 comment: IMRPhenomPv2 ROQ Test Job
 likelihood:
+  frequency domain source model: lal_binary_neutron_star
   calibration:
     sample: False
   type: bilby.gw.likelihood.roq.ROQGravitationalWaveTransient
   roq:
-    folder:  /home/roq/IMRPhenomPv2/low_mass_ratio
+    folder:  /home/roq/IMRPhenomPv2_NRTidalv2/bns/
     scale: 1.0
 sampler:
   sampler: dynesty
