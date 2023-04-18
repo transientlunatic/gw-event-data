@@ -23,13 +23,6 @@ likelihood:
     scale: 1.0
 sampler:
   sampler: dynesty
-quality:
-  maximum frequency:
-    H1: 4096
-    L1: 4096
-    V1: 4096
-    K1: 4096
-    G1: 4096
 priors:
   default: BNSPriorDict
   chirp mass:
