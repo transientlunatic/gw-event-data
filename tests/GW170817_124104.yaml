@@ -38,9 +38,9 @@ likelihood:
   window length: 128
 psds:
   4096:
-    H1: /home/tyson/O2/C02/GW170817/PSDs/128s/BayesWave_PSD_H1_IFO0_asd_median.dat
-    L1: /home/tyson/O2/C02/GW170817/PSDs/128s/BayesWave_PSD_L1_IFO0_asd_median.dat
-    V1: /home/tyson/O2/C02/GW170817/PSDs/128s/BayesWave_PSD_V1_IFO0_asd_median.dat
+    H1: /home/pe.o3/GW170818/H1-psd.dat
+    L1: /home/pe.o3/GW170818/L1-psd.dat
+    V1: /home/pe.o3/GW170818/V1-psd.dat
 priors:
   amplitude order: 0
   chirp mass:
