@@ -28,6 +28,7 @@ quality:
   maximum frequency: 
     H1: 2048
     L1: 2048
+    V1: 2048
 likelihood:
   psd length: 1377
   reference frequency: 100
