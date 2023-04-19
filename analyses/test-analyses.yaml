@@ -6,6 +6,8 @@ kind: analysis
 name: Prod0
 pipeline: bayeswave
 comment: Bayeswave on-source PSD estimation job
+needs:
+  - get-priors
 ---
 kind: analysis
 name: BilbyDynesty
@@ -16,13 +18,3 @@ needs:
     - Prod0
 sampler:
   sampler: dynesty
----
-kind: analysis
-name: BilbyNessai
-pipeline: bilby
-approximant: IMRPhenomXPHM
-comment: Bilby parameter estimation job
-needs:
-    - Prod0
-sampler:
-  sampler: nessai
