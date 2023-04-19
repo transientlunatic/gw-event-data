@@ -5,7 +5,7 @@ download:
   - posterior
 source:
   type: pesummary
-  location: /home/soichiro.morisaki/online_bilby/<event>_webdir/fast_test/samples/posterior_samples.h5
+  location: /home/soichiro.morisaki/public_html/online_bilby/<event>_webdir/fast_test/samples/posterior_samples.h5
   analysis: 1681654851_G995755_data0_1365127533-2430224_analysis_H1L1V1_merge_result
 scheduler:
   accounting group: ligo.dev.o4.cbc.pe.bilby
