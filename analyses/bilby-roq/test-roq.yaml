@@ -12,7 +12,7 @@ comment: IMRPhenomPv2 ROQ Test Job
 likelihood:
   marginalization:
     phase: True
-  frequency domain source model: lal_binary_neutron_star
+  frequency domain source model: lal_binary_neutron_star_roq
   calibration:
     sample: False
   type: bilby.gw.likelihood.roq.ROQGravitationalWaveTransient
