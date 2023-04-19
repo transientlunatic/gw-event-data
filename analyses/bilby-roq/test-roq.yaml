@@ -15,7 +15,7 @@ likelihood:
   frequency domain source model: lal_binary_neutron_star_roq
   calibration:
     sample: False
-  type: bilby.gw.likelihood.roq.ROQGravitationalWaveTransient
+  type: ROQGravitationalWaveTransient
   roq:
     folder:  None
     linear matrix: /home/roq/IMRPhenomPv2_NRTidalv2/bns/basis_128s.hdf5
