@@ -27,3 +27,21 @@ scheduler:
   accounting group: ligo.dev.o4.cbc.pe.bilby
   request memory: 1024
   request post memory: 16384
+---
+# This file contains the standard set of analyses which were
+# applied to the events for the GWTC-3 catalogue paper.
+kind: analysis
+name: Prod0
+pipeline: bayeswave
+needs: 
+  - get-priors
+comment: Bayeswave on-source PSD estimation job
+---
+kind: analysis
+name: Prod1
+pipeline: bilby
+waveform:
+  approximant: IMRPhenomXPHM
+comment: Bilby parameter estimation job
+needs:
+    - Prod0
