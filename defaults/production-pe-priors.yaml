@@ -2,8 +2,6 @@ kind: configuration
 priors:
     amplitude order: 2
     chirp mass:
-        maximum: 100
-        minimum: 0
         type: bilby.gw.prior.UniformInComponentsChirpMass
     dec:
         type: Cosine
