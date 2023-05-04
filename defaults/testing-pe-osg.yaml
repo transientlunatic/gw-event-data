@@ -1,4 +1,13 @@
 kind: configuration
+data:
+  channels:
+    H1: H1:GDS-CALIB_STRAIN_INJ1_O3Replay
+    L1: L1:GDS-CALIB_STRAIN_INJ1_O3Replay
+    V1: V1:Hrec_hoft_16384Hz_O3Replay
+  frame types:
+    H1: H1_O3ReplayMDC_llhoft
+    L1: L1_O3ReplayMDC_llhoft
+    V1: V1_O3E2ERep1_llhoft
 pipelines:
   bilby:
     quality:
