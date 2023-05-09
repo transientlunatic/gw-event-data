@@ -24,6 +24,7 @@ pipelines:
     likelihood:
       iterations: 250000
     scheduler:
+      copy frames: True
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request memory: 1024
       request post memory: 16384
