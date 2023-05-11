@@ -46,3 +46,10 @@ postprocessing:
     - final_mass_source_non_evolved
     - radiated_energy
     skymap samples: 2000
+quality:
+  minimum frequency:
+    K1: 20
+    H1: 20
+    L1: 20
+    V1: 20
+
