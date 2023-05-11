@@ -1,11 +1,15 @@
 kind: configuration
+data:
+  channels:
+    H1: H1:GDS-CALIB_STRAIN_INJ1_O3Replay
+    L1: L1:GDS-CALIB_STRAIN_INJ1_O3Replay
+    V1: V1:Hrec_hoft_16384Hz_O3Replay
+  frame types:
+    H1: H1_O3ReplayMDC_llhoft
+    L1: L1_O3ReplayMDC_llhoft
+    V1: V1_O3E2ERep1_llhoft
 pipelines:
-  bilby:
-    quality:
-      state vector:
-        L1: L1:DCS-CALIB_STATE_VECTOR_C01
-        H1: H1:DCS-CALIB_STATE_VECTOR_C01
-        V1: V1:DQ_ANALYSIS_STATE_VECTOR
+  bilby:    
     sampler:
       sampler: dynesty
       parallel jobs: 2
@@ -16,11 +20,6 @@ pipelines:
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request cpus: 16
   bayeswave:
-    quality:
-      state vector:
-        L1: L1:DCS-CALIB_STATE_VECTOR_C01
-        H1: H1:DCS-CALIB_STATE_VECTOR_C01
-        V1: V1:DQ_ANALYSIS_STATE_VECTOR
     likelihood:
       iterations: 250000
     scheduler:
@@ -47,6 +46,10 @@ postprocessing:
     - radiated_energy
     skymap samples: 2000
 quality:
+  state vector:
+        L1: L1:DCS-CALIB_STATE_VECTOR_C01
+        H1: H1:DCS-CALIB_STATE_VECTOR_C01
+        V1: V1:DQ_ANALYSIS_STATE_VECTOR
   minimum frequency:
     K1: 20
     H1: 20
