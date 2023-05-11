@@ -29,6 +29,10 @@ pipelines:
       request post memory: 16384
       osg: True
   rift:
+    scheduler:
+      osg: True
+      accounting group: ligo.dev.o4.cbc.pe.bilby
+      request memory: 1024
     sampler:
       cip:
         fitting method: quadratic
