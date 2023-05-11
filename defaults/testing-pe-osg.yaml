@@ -28,6 +28,19 @@ pipelines:
       request memory: 1024
       request post memory: 16384
       osg: True
+  rift:
+    sampler:
+      cip:
+        fitting method: quadratic
+        sampling method: GMM
+        explode jobs auto: True
+      ile:
+        n eff: 10
+        ile sampling method: adaptive_cartesian_gpu
+        jobs per worker: 5
+      use aligned phase coordinates: False
+      correlate parameters default: True
+      use rescaled transverse spin coordinates: True
 postprocessing:
   pesummary:
     accounting group: ligo.dev.o4.cbc.pe.lalinference

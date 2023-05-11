@@ -1,7 +1,21 @@
 kind: analysis
-name: Test0
+name: Prod0
+pipeline: bayeswave
+comment: Bayeswave on-source PSD estimation job
+---
+kind: analysis
+name: RIFT Pv2 Test
 status: Ready
 pipeline: RIFT
-event: GW150914
-approximant: SEOBNRv4PHM
+event:  GW150914_095045
+needs:
+    - Bayeswave
+waveform:
+    approximant: IMRPhenomPv2
 comment: This is a sample RIFT analysis
+likelihood:
+    start frequency: 20
+    assume precessing: False
+    assume no spin: True
+scheduler:
+    osg: True
