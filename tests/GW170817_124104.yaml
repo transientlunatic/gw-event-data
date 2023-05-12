@@ -30,7 +30,7 @@ quality:
     L1: 2048
     V1: 2048
 likelihood:
-  psd length: 1377
+  psd length: 128
   reference frequency: 100
   sample rate: 4096
   segment start: 1187006834
