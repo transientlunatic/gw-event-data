@@ -1,7 +1,11 @@
 # Testing blueprint for bilby ROQ jobs
 # ---
 # This blueprint file will provide the settings required to test the bilby pipeline using an ROQ likelihood.
-
+kind: analysis
+name: Bayeswave
+pipeline: bayeswave
+comment: Bayeswave on-source PSD estimation job
+---
 kind: analysis
 pipeline: bilby
 name: bilby-roq-test-pv2
