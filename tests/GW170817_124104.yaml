@@ -36,11 +36,11 @@ likelihood:
   segment start: 1187006834
   start frequency: 24
   window length: 128
-psds:
-  4096:
-    H1: /home/pe.o3/GW170818/H1-psd.dat
-    L1: /home/pe.o3/GW170818/L1-psd.dat
-    V1: /home/pe.o3/GW170818/V1-psd.dat
+#psds:
+#  4096:
+#    H1: /home/pe.o3/GW170818/H1-psd.dat
+#    L1: /home/pe.o3/GW170818/L1-psd.dat
+#    V1: /home/pe.o3/GW170818/V1-psd.dat
 waveform:
     pn amplitude order: 0
 priors:
