@@ -21,6 +21,8 @@ pipelines:
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request memory: 10000
       request post memory: 16384
+      copy frames: True
+      osg: True
     likelihood:
       iterations: 100000
       chains: 20
