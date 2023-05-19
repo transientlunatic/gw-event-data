@@ -1,3 +1,7 @@
+#
+# This blueprint contains the underlying default settings for each of the pipelines which are to be used in the O4a analysis.
+#
+
 kind: configuration
 pipelines:
   bilby:
@@ -9,7 +13,7 @@ pipelines:
     sampler:
       sampler: dynesty
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
+      accounting group: ligo.prod.o4.cbc.pe.bilby
       request cpus: 4
   bayeswave:
     quality:
@@ -18,12 +22,22 @@ pipelines:
         H1: H1:DCS-CALIB_STATE_VECTOR_C01
         V1: V1:DQ_ANALYSIS_STATE_VECTOR
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
+      accounting group: ligo.prod.o4.cbc.pe.bilby
       request memory: 1024
       request post memory: 16384
+    likelihood:
+      iterations: 100000
+      chains: 8
+      threads: 4
+  peconfigurator:
+    scheduler:
+      accounting group: ligo.prod.o4.cbc.pe.bilby
+  gwdata:
+    scheduler:
+      accounting group: ligo.prod.o4.cbc.pe.bilby
 postprocessing:
   pesummary:
-    accounting group: ligo.dev.o4.cbc.pe.bilby
+    accounting group: ligo.prod.o4.cbc.pe.bilby
     cosmology: Planck15_lal
     evolve spins: forwards
     multiprocess: 4

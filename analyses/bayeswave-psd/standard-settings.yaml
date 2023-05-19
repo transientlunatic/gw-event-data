@@ -1,0 +1,8 @@
+#
+# This blueprint sets up a Bayeswave job to create a PSD using standard settings which should be fine for BBH events.
+#
+
+kind: analysis
+name: ProdPSD
+pipeline: bayeswave
+comment: Bayeswave on-source PSD estimation job
