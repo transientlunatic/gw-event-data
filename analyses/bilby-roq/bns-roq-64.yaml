@@ -1,4 +1,4 @@
-# Blueprint for bilby ROQ jobs
+# Blueprint for 256s bilby ROQ jobs
 # ---
 # This blueprint file will provide the settings required to run the bilby pipeline using an ROQ likelihood.
 #
@@ -13,7 +13,7 @@ name: bilby-roq
 needs:
   - Bayeswave
 approximant:  IMRPhenomPv2_NRTidalv2
-comment: IMRPhenomPv2 ROQ Test Job
+comment: IMRPhenomPv2 ROQ Job
 likelihood:
   marginalization:
     phase: True
@@ -23,13 +23,13 @@ likelihood:
   type: ROQGravitationalWaveTransient
   roq:
     folder:  None
-    linear matrix: /home/roq/IMRPhenomPv2_NRTidalv2/bns/basis_128s.hdf5
-    quadratic matrix: /home/roq/IMRPhenomPv2_NRTidalv2/bns/basis_128s.hdf5
+    linear matrix: /home/roq/IMRPhenomPv2_NRTidalv2/bns/basis_64s.hdf5
+    quadratic matrix: /home/roq/IMRPhenomPv2_NRTidalv2/bns/basis_64s.hdf5
     scale: 1.0
 sampler:
   sampler: dynesty
 priors:
   default: BNSPriorDict
   chirp mass:
-    minimum: 1.4
-    maximum: 2.6
+    minimum: 2.1
+    maximum: 4.0
