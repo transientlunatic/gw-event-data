@@ -1,6 +1,6 @@
 kind: configuration
 priors:
-    amplitude order: 2
+    pn amplitude order: 0
     chirp mass:
         maximum: 100
         minimum: 0
