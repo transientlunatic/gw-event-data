@@ -5,8 +5,8 @@ download:
   - posterior
 source:
   type: pesummary
-  location: /home/soichiro.morisaki/public_html/online_bilby/<event>_webdir/fast_test/samples/posterior_samples.h5
-  analysis: 1681654851_G995755_data0_1365127533-2430224_analysis_H1L1V1_merge_result
+  location: /home/pe.o4/ER15/<event>/online/summary/samples/posterior_samples.h5
+  analysis: 1684422424_G458158_data0_1368449966-167981_analysis_H1L1_merge_result
 scheduler:
   accounting group: ligo.dev.o4.cbc.pe.bilby
   request memory: 1024
@@ -15,7 +15,6 @@ scheduler:
 kind: analysis
 name: get-priors
 pipeline: peconfigurator
-dataset: 1681654851_G995755_data0_1365127533-2430224_analysis_H1L1V1_merge_result
 minimum mass ratio: 0.05
 checks:
   - higher modes
