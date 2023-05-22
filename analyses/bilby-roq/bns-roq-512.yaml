@@ -33,3 +33,5 @@ priors:
   chirp mass:
     minimum: 0.60
     maximum: 1.10
+  spin 1:
+    maximum: 0.4

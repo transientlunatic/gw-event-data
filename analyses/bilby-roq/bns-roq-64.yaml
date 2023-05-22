@@ -13,7 +13,7 @@ name: bilby-roq
 needs:
   - Bayeswave
 approximant:  IMRPhenomPv2_NRTidalv2
-comment: IMRPhenomPv2 ROQ Job
+comment:  IMRPhenomPv2_NRTidalv2 64s ROQ job
 likelihood:
   marginalization:
     phase: True
@@ -33,3 +33,5 @@ priors:
   chirp mass:
     minimum: 2.1
     maximum: 4.0
+  spin 1:
+    maximum: 0.4
