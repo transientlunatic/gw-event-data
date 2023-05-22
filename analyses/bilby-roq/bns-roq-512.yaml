@@ -19,7 +19,7 @@ likelihood:
     phase: True
   frequency domain source model: lal_binary_neutron_star_roq
   calibration:
-    sample: False
+    sample: True
   type: ROQGravitationalWaveTransient
   roq:
     folder:  None
