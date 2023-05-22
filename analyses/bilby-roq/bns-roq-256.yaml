@@ -13,7 +13,7 @@ name: bilby-roq
 needs:
   - Bayeswave
 approximant:  IMRPhenomPv2_NRTidalv2
-comment: IMRPhenomPv2 ROQ Job
+comment: IMRPhenomPv2_NRTidalv2 256s ROQ job
 likelihood:
   marginalization:
     phase: True
