@@ -22,9 +22,12 @@ pipelines:
         H1: H1:DCS-CALIB_STATE_VECTOR_C01
         V1: V1:DQ_ANALYSIS_STATE_VECTOR
     likelihood:
-      iterations: 250000
+      iterations: 100000
+      chains: 20
+      threads: 4
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.lalinference
+      copy frames: True
+      accounting group: ligo.dev.o4.cbc.pe.bilby
       request memory: 1024
       request post memory: 16384
       osg: True
