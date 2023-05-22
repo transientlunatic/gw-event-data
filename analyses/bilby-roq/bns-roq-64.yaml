@@ -35,3 +35,5 @@ priors:
     maximum: 4.0
   spin 1:
     maximum: 0.4
+  spin 2:
+    maximum: 0.4
