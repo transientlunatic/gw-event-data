@@ -11,6 +11,7 @@ pipelines:
     scheduler:
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request cpus: 4
+      osg: True
   bayeswave:
     quality:
       state vector:
