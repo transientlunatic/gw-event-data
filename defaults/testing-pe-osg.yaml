@@ -34,6 +34,8 @@ pipelines:
       osg: True
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request memory: 1024
+      singularity image: /cvmfs/singularity.opensciencegrid.org/james-clark/research-projects-rit/rift:production
+      singularity base exe directory: /usr/bin/
     sampler:
       cip:
         fitting method: quadratic
