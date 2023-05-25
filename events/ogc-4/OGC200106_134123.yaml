@@ -22,7 +22,7 @@ likelihood:
   sample rate: 2048
   start frequency: 13.333333333333334
   window length: 8
-name: OGC191224_043228
+name: OGC200106_134123
 priors:
   amplitude order: 1
   chirp mass:
