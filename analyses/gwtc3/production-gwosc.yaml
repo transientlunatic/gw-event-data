@@ -1,0 +1,42 @@
+# This file contains the standard set of analyses which were
+# applied to the events for the GWTC-3 catalogue paper.
+kind: analysis
+name: get-data
+pipeline: gwdata
+download:
+  - frames
+---
+kind: analysis
+name: Prod0
+pipeline: bayeswave
+comment: Bayeswave on-source PSD estimation job
+data:
+  channels:   
+    H1: H1:GWOSC-16KHZ_R1_STRAIN
+    L1: L1:GWOSC-16KHZ_R1_STRAIN
+    V1: V1:GWOSC-16KHZ_R1_STRAIN
+  frame types:   
+    H1: H1:H1_GWOSC_O3b_16KHZ_R1
+    L1: L1:L1_GWOSC_O3b_16KHZ_R1
+    V1: V1:V1_GWOSC_O3b_16KHZ_R1
+needs:
+    - get-data
+---
+kind: analysis
+name: Prod1
+pipeline: bilby
+waveform:
+  approximant: IMRPhenomXPHM
+comment: Bilby parameter estimation job
+data:
+  channels:   
+    H1: H1:GWOSC-16KHZ_R1_STRAIN
+    L1: L1:GWOSC-16KHZ_R1_STRAIN
+    V1: V1:GWOSC-16KHZ_R1_STRAIN
+  frame types:   
+    H1: H1:H1_GWOSC_O3b_16KHZ_R1
+    L1: L1:L1_GWOSC_O3b_16KHZ_R1
+    V1: V1:V1_GWOSC_O3b_16KHZ_R1
+needs:
+    - Prod0
+
