@@ -21,7 +21,7 @@ likelihood:
   segment start: 1256779553.534634
   start frequency: 13.333333333333334
   window length: 8
-name: GW191103_012549
+name: OGC191224_043228
 priors:
   amplitude order: 1
   chirp mass:
