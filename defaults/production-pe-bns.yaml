@@ -8,27 +8,25 @@ pipelines:
         V1: V1:DQ_ANALYSIS_STATE_VECTOR
     sampler:
       sampler: dynesty
-      parallel jobs: 2
-      sampler kwargs: "{nlive: 100, dlogz: 1, nact: 5}"
     scheduler:
       accounting group: ligo.dev.o4.cbc.pe.bilby
-      request cpus: 16
+      request cpus: 4
   bayeswave:
     quality:
       state vector:
         L1: L1:DCS-CALIB_STATE_VECTOR_C01
         H1: H1:DCS-CALIB_STATE_VECTOR_C01
         V1: V1:DQ_ANALYSIS_STATE_VECTOR
-    likelihood:
-      iterations: 250000
     scheduler:
       accounting group: ligo.dev.o4.cbc.pe.bilby
-      request memory: 1024
+      request memory: 10000
       request post memory: 16384
-  rift:
-    scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
-      request memory: 1024
+      copy frames: True
+      osg: True
+    likelihood:
+      iterations: 100000
+      chains: 20
+      threads: 4
 postprocessing:
   pesummary:
     accounting group: ligo.dev.o4.cbc.pe.bilby
