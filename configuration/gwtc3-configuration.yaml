@@ -1,0 +1,97 @@
+#
+# This blueprint contains the underlying default settings for each of the pipelines as they were used for the O3 analyses.
+# However there are some updates to the settings for Bayeswave to account for its improved multiprocessing.
+#
+kind: configuration
+pipelines:
+  bilby:
+    quality:
+      state vector:
+        L1: L1:DCS-CALIB_STATE_VECTOR_C01
+        H1: H1:DCS-CALIB_STATE_VECTOR_C01
+        V1: V1:DQ_ANALYSIS_STATE_VECTOR
+    sampler:
+      sampler: dynesty
+    scheduler:
+      request cpus: 4
+  bayeswave:
+    quality:
+      state vector:
+        L1: L1:DCS-CALIB_STATE_VECTOR_C01
+        H1: H1:DCS-CALIB_STATE_VECTOR_C01
+        V1: V1:DQ_ANALYSIS_STATE_VECTOR
+    scheduler:
+      request memory: 1024
+      request post memory: 16384
+    likelihood:
+      iterations: 100000
+      chains: 8
+      threads: 4
+postprocessing:
+  pesummary:
+    cosmology: Planck15_lal
+    evolve spins: forwards
+    multiprocess: 4
+    redshift: exact
+    regenerate posteriors:
+    - redshift
+    - mass_1_source
+    - mass_2_source
+    - chirp_mass_source
+    - total_mass_source
+    - final_mass_source
+    - final_mass_source_non_evolved
+    - radiated_energy
+    skymap samples: 2000
+---
+kind: configuration
+priors:
+    pn amplitude order: 1
+    chirp mass:
+        maximum: 100
+        minimum: 0
+        type: bilby.gw.prior.UniformInComponentsChirpMass
+    dec:
+        type: Cosine
+    luminosity distance:
+        alpha: 2
+        maximum: 1000
+        minimum: 10
+        type: PowerLaw
+    mass 1:
+        maximum: 1000
+        minimum: 1
+        type: Constraint
+    mass 2:
+        maximum: 1000
+        minimum: 1
+        type: Constraint
+    mass ratio:
+        maximum: 1.0
+        minimum: 0.1
+        type: bilby.gw.prior.UniformInComponentsMassRatio
+    phase:
+        boundary: periodic
+        type: Uniform
+    phi 12:
+        type: Uniform
+    phi jl:
+        type: Uniform
+    psi:
+        type: Uniform
+    ra:
+        type: Uniform
+    spin 1:
+        maximum: 1
+        minimum: 0
+        type: Uniform
+    spin 2:
+        maximum: 1
+        minimum: 0
+        type: Uniform
+    theta jn:
+        type: Sine
+    tilt 1:
+        type: Sine
+    tilt 2:
+        type: Sine
