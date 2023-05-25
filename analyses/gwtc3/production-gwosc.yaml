@@ -4,7 +4,8 @@ kind: analysis
 name: get-data
 pipeline: gwdata
 download:
-  - frames
+  - 
+file length: 4096
 ---
 kind: analysis
 name: Prod0
