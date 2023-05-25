@@ -20,7 +20,6 @@ likelihood:
   psd length: 8
   reference frequency: 20
   sample rate: 2048
-  segment start: 1256779553.534634
   start frequency: 13.333333333333334
   window length: 8
 name: OGC191224_043228
