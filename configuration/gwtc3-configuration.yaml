@@ -3,6 +3,11 @@
 # However there are some updates to the settings for Bayeswave to account for its improved multiprocessing.
 #
 kind: configuration
+quality:
+  minimum frequency:
+    L1: 20
+    H1: 20
+    V1: 20
 pipelines:
   bilby:
     quality:
