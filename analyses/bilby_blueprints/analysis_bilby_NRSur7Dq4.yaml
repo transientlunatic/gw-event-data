@@ -1,0 +1,12 @@
+# This file contains a standard bilby_pipe analysis
+kind: analysis
+name: Prod1
+pipeline: bilby
+waveform:
+    approximant: NRSur7Dq4
+    arguments: {'pn-amplitude-order': 0}
+scheduler:
+    accounting group: test
+likelihood: {'start frequency': 0}
+comment: Bilby parameter estimation job
+
