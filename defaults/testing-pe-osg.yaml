@@ -1,5 +1,13 @@
 kind: configuration
 pipelines:
+  gwdata:
+    scheduler:
+      accounting group: ligo.dev.o4.cbc.pe.bilby
+      request cpus: 1
+  peconfigurator:
+    scheduler:
+      accounting group: ligo.dev.o4.cbc.pe.bilby
+      request cpus: 1
   bilby:
     quality:
       state vector:
