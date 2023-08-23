@@ -1,12 +1,19 @@
 # This file contains a standard bilby_pipe analysis
 kind: analysis
-name: Prod1
+name: BayesWave-PSD
+pipeline: bayeswave
+comment: Bayeswave on-source PSD estimation job
+---
+kind: analysis
+name: bilby-NRSur7Dq4
 pipeline: bilby
 waveform:
-    approximant: NRSur7Dq4
-    arguments: {'pn-amplitude-order': 0}
-scheduler:
-    accounting group: test
-likelihood: {'start frequency': 0}
-comment: Bilby parameter estimation job
+  approximant: NRSur7Dq4
+  arguments:
+    pn-amplitude-order: 0
+likelihood:
+  start frequency: 0
 
+comment: Default PE job using NRSur7Dq4 and bilby
+needs:
+    - BayesWave-PSD
