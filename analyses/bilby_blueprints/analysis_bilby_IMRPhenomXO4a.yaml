@@ -1,0 +1,18 @@
+# This file contains a standard bilby_pipe analysis
+kind: analysis
+name: BayesWave-PSD
+pipeline: bayeswave
+comment: Bayeswave on-source PSD estimation job
+---
+kind: analysis
+name: bilby-IMRPhenomXO4a
+pipeline: bilby
+waveform:
+  approximant: IMRPhenomXO4a
+  arguments:
+    PhenomXAntisymmetricWaveform: 1
+    PhenomXHMReleaseVersion: 122019
+
+comment: Default PE job using IMRPhenomXO4a and bilby
+needs:
+    - BayesWave-PSD
