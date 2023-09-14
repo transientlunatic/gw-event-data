@@ -3,6 +3,6 @@
 #
 
 kind: analysis
-name: ProdPSD
+name: generate-psd
 pipeline: bayeswave
-comment: Bayeswave on-source PSD estimation job
+comment: Bayeswave on-source PSD estimation process
