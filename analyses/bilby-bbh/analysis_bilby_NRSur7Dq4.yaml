@@ -1,10 +1,5 @@
 # This file contains a standard bilby_pipe analysis
 kind: analysis
-name: BayesWave-PSD
-pipeline: bayeswave
-comment: Bayeswave on-source PSD estimation job
----
-kind: analysis
 name: bilby-NRSur7Dq4
 pipeline: bilby
 waveform:
@@ -13,7 +8,13 @@ waveform:
     pn-amplitude-order: 0
 likelihood:
   start frequency: 0
+priors:
+  total mass:
+    type: Constraint
+    minimum: 60
+    maximum: 400
 
-comment: Default PE job using NRSur7Dq4 and bilby
+comment: PE job using NRSur7Dq4 and bilby
 needs:
-    - BayesWave-PSD
+    - get-priors
+    - generate-psd
