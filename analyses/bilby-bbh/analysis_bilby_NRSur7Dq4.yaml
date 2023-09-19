@@ -13,7 +13,9 @@ priors:
     type: Constraint
     minimum: 60
     maximum: 400
-
+  mass ratio:
+    minimum: 1/6.
+    maximum: 1
 comment: PE job using NRSur7Dq4 and bilby
 needs:
     - get-priors
