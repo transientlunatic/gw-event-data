@@ -19,5 +19,5 @@ priors:
     maximum: 1
 comment: PE job using NRSur7Dq4 and bilby
 needs:
-    - get-priors
-    - generate-psd
+  - get-priors
+  - generate-psd
