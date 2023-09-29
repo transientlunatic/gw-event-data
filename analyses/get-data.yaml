@@ -1,0 +1,46 @@
+kind: analysis
+name: get-data
+pipeline: gwdata
+download:
+  - posterior
+source:
+  type: pesummary
+  location: /home/pe.o4/ER15/<event>/online/summary/samples/posterior_samples.h5
+  analysis: 1684422424_G458158_data0_1368449966-167981_analysis_H1L1_merge_result
+scheduler:
+  accounting group: ligo.dev.o4.cbc.pe.bilby
+  request memory: 1024
+  request post memory: 16384
+---
+kind: analysis
+name: get-priors
+pipeline: peconfigurator
+minimum mass ratio: 0.05
+checks:
+  - higher modes
+  - luminosity distance
+  - no safety
+needs:
+  - get-data
+scheduler:
+  accounting group: ligo.dev.o4.cbc.pe.bilby
+  request memory: 1024
+  request post memory: 16384
+---
+# This file contains the standard set of analyses which were
+# applied to the events for the GWTC-3 catalogue paper.
+kind: analysis
+name: Prod0
+pipeline: bayeswave
+needs: 
+  - get-priors
+comment: Bayeswave on-source PSD estimation job
+---
+kind: analysis
+name: Prod1
+pipeline: bilby
+waveform:
+  approximant: IMRPhenomXPHM
+comment: Bilby parameter estimation job
+needs:
+    - Prod0
