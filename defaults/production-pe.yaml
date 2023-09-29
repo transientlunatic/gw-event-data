@@ -1,7 +1,3 @@
-#
-# This blueprint contains the underlying default settings for each of the pipelines which are to be used in the O4a analysis.
-#
-
 kind: configuration
 pipelines:
   bilby:
