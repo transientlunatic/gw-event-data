@@ -1,0 +1,23 @@
+# This file contains a standard bilby_pipe analysis
+kind: analysis
+name: bilby-NRSur7dq4
+pipeline: bilby
+waveform:
+  approximant: NRSur7dq4
+  arguments:
+    pn-amplitude-order: 0
+  enforce signal duration: False
+likelihood:
+  start frequency: 0
+priors:
+  total mass:
+    type: Constraint
+    minimum: 60
+    maximum: 400
+  mass ratio:
+    minimum: 1/6.
+    maximum: 1
+comment: PE job using NRSur7dq4 and bilby
+needs:
+  - get-priors
+  - generate-psd
