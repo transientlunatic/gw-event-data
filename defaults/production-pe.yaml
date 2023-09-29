@@ -29,12 +29,6 @@ pipelines:
       iterations: 100000
       chains: 8
       threads: 4
-  peconfigurator:
-    scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
-  gwdata:
-    scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
 postprocessing:
   pesummary:
     accounting group: ligo.dev.o4.cbc.pe.bilby
