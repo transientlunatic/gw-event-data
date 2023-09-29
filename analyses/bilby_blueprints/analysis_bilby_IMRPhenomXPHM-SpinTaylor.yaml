@@ -1,0 +1,13 @@
+kind: analysis
+name: bilby-IMRPhenomXPHM-SpinTaylor
+pipeline: bilby
+waveform:
+  approximant: IMRPhenomXPHM
+  arguments:
+    FinalSpinMod: 2
+    PhenomXHMReleaseVersion: 122022
+    PrecVersion: 320
+comment: Default PE job using IMRPhenomXPHM-SpinTaylor and bilby
+needs:
+    - get-priors
+    - generate-psd
