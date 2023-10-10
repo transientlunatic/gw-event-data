@@ -4,8 +4,7 @@ name: bilby-NRSur7dq4
 pipeline: bilby
 waveform:
   approximant: NRSur7dq4
-  arguments:
-    pn-amplitude-order: 0
+  pn amplitude order: 0
   enforce signal duration: False
 likelihood:
   start frequency: 0
