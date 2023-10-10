@@ -8,10 +8,12 @@ pipeline: bilby
 waveform:
   approximant: SEOBNRv5PHM
   generator: bilby.gw.waveform_generator.WaveformGenerator
-  frequency domain source model: gwsignal_binary_black_hole
   arguments:
     lmax_nyquist: 3
-  
+
+likelihood:
+  frequency domain source model: gwsignal_binary_black_hole
+    
 comment: PE job using SEOBNRv5PHM and bilby
 needs:
   - get-priors
