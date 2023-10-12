@@ -20,3 +20,6 @@ comment: PE job using NRSur7dq4 and bilby
 needs:
   - get-priors
   - generate-psd
+scheduler:
+  additional files:
+    - /home/pe.o4/lalsuite-extra/data/lalsimulation/NRSur7dq4.h5
