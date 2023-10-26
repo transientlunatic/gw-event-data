@@ -9,7 +9,7 @@ pipelines:
     sampler:
       sampler: dynesty
       parallel jobs: 2
-      sampler kwargs: "{nlive: 100, dlogz: 1}"
+      sampler kwargs: FastTest
     scheduler:
       local generation: True
       osg: True
