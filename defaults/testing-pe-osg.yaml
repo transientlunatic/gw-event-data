@@ -29,6 +29,7 @@ pipelines:
       copy frames: True
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request memory: 1024
+      request disk: 3000000
       request post memory: 16384
       osg: True
 postprocessing:
