@@ -53,3 +53,7 @@ postprocessing:
     - redshift
     - radiated_energy
     skymap samples: 2000
+quality:
+  minimum frequency:
+    H1: 20
+    L1: 20
