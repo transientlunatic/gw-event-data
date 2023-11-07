@@ -57,3 +57,6 @@ quality:
   minimum frequency:
     H1: 20
     L1: 20
+    V1: 20
+    G1: 20
+    K1: 20
