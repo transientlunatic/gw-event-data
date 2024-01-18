@@ -28,6 +28,7 @@ pipelines:
     scheduler:
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request cpus: 4
+      request disk: 8 #GB
   bayeswave:
     quality:
       state vector:

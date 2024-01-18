@@ -28,7 +28,7 @@ pipelines:
       parallel jobs: 2
       sampler kwargs: FastTest
     scheduler:
-      local generation: True
+      local generation: False
       osg: True
       accounting group: ligo.dev.o4.cbc.pe.bilby
       request cpus: 16
