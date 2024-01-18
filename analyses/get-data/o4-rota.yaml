@@ -1,0 +1,19 @@
+# This blueprint allows retrieval of O4 online or rota posteriors and
+# calibration uncertainty envelopes.
+
+kind: analysis
+name: get-data
+pipeline: gwdata
+download:
+  - posterior
+  - calibration
+source:
+  type: pesummary
+  location: /home/pe.o4/O4a/<event>/<illustrative_result>/summary/samples/posterior_samples.h5
+scheduler:
+  accounting group: ligo.dev.o4.cbc.pe.bilby
+  request memory: 1024
+  request post memory: 16384
+locations:
+  calibration directory: /home/cal/archive/
+calibration version: v0
