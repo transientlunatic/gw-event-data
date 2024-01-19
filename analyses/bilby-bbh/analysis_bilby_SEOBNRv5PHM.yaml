@@ -26,7 +26,7 @@ scheduler:
   request cpus: 64
   request memory: 40.0 #GB
   environment variables:
-    - HDF5_USE_FILE_LOCKING: False
-    - OMP_NUM_THREADS: 1
-    - OMP_PROC_BIND: False
-    - NUMBA_CACHE_DIR: /tmp
+    HDF5_USE_FILE_LOCKING: False
+    OMP_NUM_THREADS: 1
+    OMP_PROC_BIND: False
+    NUMBA_CACHE_DIR: /tmp
