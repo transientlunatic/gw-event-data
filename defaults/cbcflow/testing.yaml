@@ -1,0 +1,12 @@
+# This blueprint only adds the
+# applicator component of CBCFlow
+# in order to avoid problems with
+# asimov overwriting real run data with
+# testing analyses.
+# Please use the full production blueprint for
+# production projects.
+kind: configuration
+hooks:
+   applicator:
+     cbcflow:
+       library location: cbcflow-library
