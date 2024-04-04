@@ -16,4 +16,4 @@ scheduler:
   request post memory: 16384
 locations:
   calibration directory: /home/cal/archive/
-calibration version: v0
+calibration version: v1
