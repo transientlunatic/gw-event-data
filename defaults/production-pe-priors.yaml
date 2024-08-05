@@ -1,17 +1,15 @@
 kind: configuration
 priors:
-    amplitude order: 2
     chirp mass:
         maximum: 100
-        minimum: 0
+        minimum: 1
         type: bilby.gw.prior.UniformInComponentsChirpMass
     dec:
         type: Cosine
     luminosity distance:
-        alpha: 2
-        maximum: 1000
+        maximum: 20000
         minimum: 10
-        type: PowerLaw
+        type: bilby.gw.prior.UniformSourceFrame
     mass 1:
         maximum: 1000
         minimum: 1
@@ -22,7 +20,7 @@ priors:
         type: Constraint
     mass ratio:
         maximum: 1.0
-        minimum: 0.1
+        minimum: 0.05
         type: bilby.gw.prior.UniformInComponentsMassRatio
     phase:
         boundary: periodic

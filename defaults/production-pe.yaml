@@ -1,3 +1,7 @@
+#
+# This blueprint contains the underlying default settings for each of the pipelines which are to be used in the O4a analysis.
+#
+
 kind: configuration
 data:
   channels:
@@ -7,39 +11,50 @@ data:
   frame types:
     H1: H1_HOFT_C00
     L1: L1_HOFT_C00
-    V1: V1Online
+    V1: HoftOnline
+likelihood:
+  roll off time: 1.0
 pipelines:
   gwdata:
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
+      accounting group: ligo.prod.o4.cbc.pe.bilby
       request cpus: 1
   peconfigurator:
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
+      accounting group: ligo.prod.o4.cbc.pe.bilby
       request cpus: 1
   bilby:
-    quality:
-      state vector:
-        L1: L1:DCS-CALIB_STATE_VECTOR_C01
-        H1: H1:DCS-CALIB_STATE_VECTOR_C01
-        V1: V1:DQ_ANALYSIS_STATE_VECTOR
     sampler:
       sampler: dynesty
+      kwargs:
+        nlive: 1000
+        naccept: 60
+        sample: acceptance-walk
+        check_point_plot: True
+        maxmcmc: 100000
+      parallel jobs: 3
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
-      request cpus: 4
+      accounting group: ligo.prod.o4.cbc.pe.bilby
+      request cpus: 16
       request disk: 8 #GB
+      osg: True
+      copy frames: True
+    likelihood:
+      roll off time: 1
+      marginalization:
+        time: False
+        distance: True
+
   bayeswave:
-    quality:
-      state vector:
-        L1: L1:DCS-CALIB_STATE_VECTOR_C01
-        H1: H1:DCS-CALIB_STATE_VECTOR_C01
-        V1: V1:DQ_ANALYSIS_STATE_VECTOR
     scheduler:
-      accounting group: ligo.dev.o4.cbc.pe.bilby
+      accounting group: ligo.prod.o4.cbc.pe.bilby
       request memory: 1024
       request post memory: 16384
+      copy frames: True
+      request disk: 3000000
+      osg: True
     likelihood:
+      roll off time: 1
       iterations: 100000
       chains: 8
       threads: 4
@@ -50,11 +65,14 @@ postprocessing:
     evolve spins: forwards
     multiprocess: 4
     redshift: exact
-    regenerate posteriors:
-    - redshift
-    - radiated_energy
+    calculate:
+    - precessing snr
     skymap samples: 2000
 quality:
+  state vector:
+    L1: L1:GDS-CALIB_STATE_VECTOR_AR
+    H1: H1:GDS-CALIB_STATE_VECTOR_AR
+    V1: V1:DQ_ANALYSIS_STATE_VECTOR
   minimum frequency:
     H1: 20
     L1: 20
