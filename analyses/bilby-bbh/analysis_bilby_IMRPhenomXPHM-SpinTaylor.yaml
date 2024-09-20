@@ -5,7 +5,6 @@ waveform:
   approximant: IMRPhenomXPHM
   arguments:
     PhenomXPFinalSpinMod: 2
-    PhenomXHMReleaseVersion: 122022
     PhenomXPrecVersion: 320
 comment: Default PE job using IMRPhenomXPHM-SpinTaylor and bilby
 needs:
