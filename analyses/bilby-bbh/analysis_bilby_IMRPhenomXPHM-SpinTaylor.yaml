@@ -4,9 +4,9 @@ pipeline: bilby
 waveform:
   approximant: IMRPhenomXPHM
   arguments:
-    FinalSpinMod: 2
+    PhenomXPFinalSpinMod: 2
     PhenomXHMReleaseVersion: 122022
-    PrecVersion: 320
+    PhenomXPrecVersion: 320
 comment: Default PE job using IMRPhenomXPHM-SpinTaylor and bilby
 needs:
     - get-priors
