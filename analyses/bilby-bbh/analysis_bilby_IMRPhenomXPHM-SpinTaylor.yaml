@@ -4,9 +4,10 @@ pipeline: bilby
 waveform:
   approximant: IMRPhenomXPHM
   arguments:
+    PhenomXHMReleaseVersion: 122022
     PhenomXPFinalSpinMod: 2
     PhenomXPrecVersion: 320
-comment: Default PE job using IMRPhenomXPHM-SpinTaylor and bilby
+comment: Default PE job using IMRPhenomXPHM-SpinTaylor and bilby with corrected PhenomXP settings
 needs:
     - get-priors
     - generate-psd
