@@ -48,10 +48,11 @@ pipelines:
   bayeswave:
     scheduler:
       accounting group: ligo.prod.o4.cbc.pe.bilby
-      request memory: 1024
-      request post memory: 16384
+      request memory: 1024 MB
+      request post memory: 16384 MB
       copy frames: True
-      request disk: 3000000
+      request disk: 3000000 KB
+      request post disk: 3000000 KB
       osg: True
     likelihood:
       roll off time: 1
