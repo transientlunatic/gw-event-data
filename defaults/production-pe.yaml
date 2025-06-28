@@ -56,8 +56,8 @@ pipelines:
       osg: True
     likelihood:
       roll off time: 1
-      iterations: 100000
-      chains: 8
+      iterations: 250000
+      chains: 16
       threads: 4
 postprocessing:
   pesummary:
