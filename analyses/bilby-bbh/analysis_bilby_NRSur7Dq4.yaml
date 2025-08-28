@@ -22,4 +22,4 @@ needs:
   - generate-psd
 scheduler:
   additional files:
-    - /home/pe.o4/lalsuite-extra/data/lalsimulation/NRSur7dq4.h5
+    - /home/pe.o4/lalsuite-waveform-data/waveform_data/NRSur7dq4_v1.0.h5
