@@ -27,12 +27,12 @@ pipelines:
     sampler:
       sampler: dynesty
       kwargs:
-        nlive: 1000
+        nlive: 2000
         naccept: 60
         sample: acceptance-walk
         check_point_plot: True
         maxmcmc: 100000
-      parallel jobs: 3
+      parallel jobs: 2
     scheduler:
       accounting group: ligo.prod.o4.cbc.pe.bilby
       request cpus: 16
