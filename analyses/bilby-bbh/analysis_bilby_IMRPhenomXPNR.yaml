@@ -1,0 +1,11 @@
+# This file contains a standard bilby_pipe analysis
+kind: analysis
+name: bilby-IMRPhenomXPNR
+pipeline: bilby
+waveform:
+  approximant: IMRPhenomXPNR
+
+comment: PE job using IMRPhenomXPNR and bilby
+needs:
+    - get-priors
+    - generate-psd
