@@ -44,6 +44,7 @@ pipelines:
       marginalization:
         time: False
         distance: True
+    cosmology: Planck15_LAL
 
   bayeswave:
     scheduler:
