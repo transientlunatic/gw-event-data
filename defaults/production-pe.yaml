@@ -39,6 +39,7 @@ pipelines:
       request disk: 8 #GB
       osg: True
       copy frames: True
+      periodic restart time: 3600
     likelihood:
       roll off time: 1
       marginalization:
