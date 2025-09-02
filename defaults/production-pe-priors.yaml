@@ -10,6 +10,7 @@ priors:
         maximum: 20000
         minimum: 10
         type: bilby.gw.prior.UniformSourceFrame
+        cosmology: Planck15_LAL
     mass 1:
         maximum: 1000
         minimum: 1
