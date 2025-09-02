@@ -5,11 +5,14 @@ pipeline: bilby
 # SEOBNRv5PHM is implemented via GWSignal and requires
 # different settings compared to LALSimulation-based
 # waveforms
+# For GWTC-5, we enable the mode asymmetries
 waveform:
   approximant: SEOBNRv5PHM
   generator: bilby.gw.waveform_generator.WaveformGenerator
   arguments:
     lmax_nyquist: 1
+    enable_antisymmetric_modes: True
+    antisymmetric_modes_hm: True
 
 likelihood:
   frequency domain source model: gwsignal_binary_black_hole
@@ -20,7 +23,7 @@ needs:
   - generate-psd
 
 # For standard LIGO analyses we target these at a dedicated cluster
-# For purposes other than GWTC-4 you should remove the next three lines.
+# For purposes other than GWTC-5 you should remove the next three lines.
 scheduler:
   desired sites: AEI-Hypatia
   request cpus: 64
@@ -30,3 +33,4 @@ scheduler:
     OMP_NUM_THREADS: 1
     OMP_PROC_BIND: False
     NUMBA_CACHE_DIR: /tmp
+    MKL_NUM_THREADS: 1
