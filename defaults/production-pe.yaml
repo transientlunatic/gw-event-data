@@ -63,8 +63,8 @@ pipelines:
       threads: 4
 postprocessing:
   pesummary:
-    accounting group: ligo.dev.o4.cbc.pe.bilby
-    cosmology: Planck15
+    accounting group: ligo.prod.o4.cbc.pe.bilby
+    cosmology: Planck15_LAL
     evolve spins: forwards
     multiprocess: 4
     redshift: exact
