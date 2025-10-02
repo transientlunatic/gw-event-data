@@ -18,6 +18,8 @@ priors:
     maximum: 1
 comment: PE job using NRSur7dq4 and bilby
 needs:
+  - get-calibration-ligo
+  - get-calibration-virgo
   - get-priors
   - generate-psd
 scheduler:

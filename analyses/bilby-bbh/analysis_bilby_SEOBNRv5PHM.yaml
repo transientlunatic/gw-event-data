@@ -19,6 +19,8 @@ likelihood:
     
 comment: PE job using SEOBNRv5PHM and bilby
 needs:
+  - get-calibration-ligo
+  - get-calibration-virgo
   - get-priors
   - generate-psd
 

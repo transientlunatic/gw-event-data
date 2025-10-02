@@ -7,7 +7,7 @@ checks:
   - luminosity distance
   - no safety
 needs:
-  - get-data
+  - get-preliminary-posterior
 scheduler:
   accounting group: ligo.dev.o4.cbc.pe.bilby
   request memory: 1024

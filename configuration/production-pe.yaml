@@ -1,0 +1,54 @@
+#
+# This blueprint contains the underlying default settings for each of the pipelines which are to be used in the O4a analysis.
+#
+
+kind: configuration
+pipelines:
+  bilby:
+    quality:
+      state vector:
+        L1: L1:DCS-CALIB_STATE_VECTOR_C01
+        H1: H1:DCS-CALIB_STATE_VECTOR_C01
+        V1: V1:DQ_ANALYSIS_STATE_VECTOR
+    sampler:
+      sampler: dynesty
+    scheduler:
+      accounting group: ligo.prod.o4.cbc.pe.bilby
+      request cpus: 4
+  bayeswave:
+    quality:
+      state vector:
+        L1: L1:DCS-CALIB_STATE_VECTOR_C01
+        H1: H1:DCS-CALIB_STATE_VECTOR_C01
+        V1: V1:DQ_ANALYSIS_STATE_VECTOR
+    scheduler:
+      accounting group: ligo.prod.o4.cbc.pe.bilby
+      request memory: 1024
+      request post memory: 16384
+    likelihood:
+      iterations: 100000
+      chains: 8
+      threads: 4
+  peconfigurator:
+    scheduler:
+      accounting group: ligo.prod.o4.cbc.pe.bilby
+  gwdata:
+    scheduler:
+      accounting group: ligo.prod.o4.cbc.pe.bilby
+postprocessing:
+  pesummary:
+    accounting group: ligo.prod.o4.cbc.pe.bilby
+    cosmology: Planck15_lal
+    evolve spins: forwards
+    multiprocess: 4
+    redshift: exact
+    regenerate posteriors:
+    - redshift
+    - mass_1_source
+    - mass_2_source
+    - chirp_mass_source
+    - total_mass_source
+    - final_mass_source
+    - final_mass_source_non_evolved
+    - radiated_energy
+    skymap samples: 2000

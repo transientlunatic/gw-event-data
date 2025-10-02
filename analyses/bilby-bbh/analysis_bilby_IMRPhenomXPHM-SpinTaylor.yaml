@@ -9,5 +9,7 @@ waveform:
     PhenomXPrecVersion: 320
 comment: Default PE job using IMRPhenomXPHM-SpinTaylor
 needs:
+    - get-calibration-ligo
+    - get-calibration-virgo
     - get-priors
     - generate-psd

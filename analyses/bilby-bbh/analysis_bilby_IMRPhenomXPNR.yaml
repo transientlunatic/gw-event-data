@@ -7,5 +7,7 @@ waveform:
 
 comment: PE job using IMRPhenomXPNR and bilby
 needs:
+    - get-calibration-ligo
+    - get-calibration-virgo
     - get-priors
     - generate-psd

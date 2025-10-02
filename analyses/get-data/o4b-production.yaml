@@ -1,0 +1,46 @@
+kind: analysis
+name: get-preliminary-posterior
+pipeline: gwdata
+download:
+  - posterior
+source:
+  type: pesummary
+  location: /home/pe.o4/O4b/<event>/<illustrative_result>/summary/samples/posterior_samples.h5
+scheduler:
+  accounting group: ligo.dev.o4.cbc.pe.bilby
+  request memory: 1024
+  request post memory: 16384
+---
+kind: analysis
+name: get-calibration-ligo
+pipeline: gwdata
+interferometers:
+  - L1
+  - H1
+download:
+  - calibration
+scheduler:
+  accounting group: ligo.dev.o4.cbc.pe.bilby
+  request memory: 1024
+  request post memory: 16384
+locations:
+  calibration directory: /home/cal/archive/
+calibration version: v1
+---
+kind: analysis
+name: get-calibration-virgo
+pipeline: gwdata
+interferometers:
+  - V1
+download:
+  - calibration
+source:
+  type: frame
+scheduler:
+  accounting group: ligo.dev.o4.cbc.pe.bilby
+  request memory: 1024
+  request post memory: 16384
+locations:
+  calibration directory: /home/cal/archive/
+calibration version: v1
+virgo prefix: V1:Hrec_hoftReproAR1_U01
