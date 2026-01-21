@@ -1,0 +1,15 @@
+kind: analysisbundle
+name: production-default
+description: Standard GWTC-3 analysis pipeline
+comment: |
+  This bundle applies the standard production parameter estimation pipeline
+  used for GWTC-3. It includes:
+  - Bayeswave on-source PSD estimation (Prod0)
+  - Bilby parameter estimation with IMRPhenomXPHM (Prod1)
+
+  The Bilby analysis depends on the Bayeswave PSD, so they run sequentially.
+
+analyses:
+  - get-data
+  - bayeswave-psd
+  - bilby-IMRPhenomXPHM

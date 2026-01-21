@@ -1,0 +1,16 @@
+kind: analysisbundle
+name: multi-waveform
+description: Multiple waveform analyses for systematic studies
+comment: |
+  Runs parameter estimation with multiple waveform approximants
+  to assess systematic uncertainties. Includes:
+  - IMRPhenomXPHM (semi-analytical, aligned-spin + precession)
+  - NRSur7dq4 (numerical relativity surrogate)
+  - SEOBNRv4PHM (effective-one-body, higher modes)
+
+analyses:
+  - get-data
+  - bayeswave-psd
+  - bilby-imrphenomxphm
+  - bilby-nrsur7dq4
+  - bilby-seobbnrv4phm

@@ -1,0 +1,9 @@
+kind: analysisbundle
+name: testing-quick
+description: Fast testing bundle with reduced settings
+comment: |
+  Lightweight bundle for rapid iteration and testing.
+  Uses reduced nlive and memory requirements for faster turnaround.
+
+analyses:
+  - bilby-bbh
